@@ -1,11 +1,11 @@
-# **Mock API**
+# **GraphQL Mock API**
 
 A small Mock API service to easily mock up data for your specific project.
 
 ### Requirements
 
-- [node: ^16.\*](https://nodejs.org/en/download)
-- [yarn: ^1.\*](https://classic.yarnpkg.com/lang/en/docs/install)
+- [Node: ^16.\*](https://nodejs.org/en/download)
+- [Yarn: ^1.\*](https://classic.yarnpkg.com/lang/en/docs/install)
 
 ---
 
