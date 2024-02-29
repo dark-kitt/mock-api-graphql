@@ -1,0 +1,12 @@
+# example
+# https://graphql.org/graphql-js/object-types/
+# Mock API schema
+type RandomDie {
+  numSides: Int!
+  rollOnce: Int!
+  roll(numRolls: Int!): [Int]
+}
+
+type Query {
+  getDie(numSides: Int): RandomDie
+}
