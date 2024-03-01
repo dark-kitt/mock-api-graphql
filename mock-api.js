@@ -41,7 +41,6 @@ const getRoutes = dir => {
 
       const name = file.name.replace(/\.js/, '');
       const route = path === root ? '' : path.replace(root, '');
-      const endpoint = name.replace(/\s+/g, '-');
 
       routes.push({
         name: name,
