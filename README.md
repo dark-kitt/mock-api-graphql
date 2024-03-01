@@ -21,12 +21,8 @@ Coming soon ...
 
 **start the api**
 
-```javascript
-...
-"script": {
-  "api": "node mock-api"
-}
-...
+```shell
+yarn api
 ```
 or require the index.js file in your specific script.
 ```javascript
