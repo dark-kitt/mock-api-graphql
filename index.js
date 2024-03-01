@@ -1,7 +1,8 @@
 /** file system */
+const { existsSync } = require('fs');
 const { spawn } = require('child_process');
 /** require environment variables */
-let env = require('../config/env');
+let env = (() => existsSync('./.env') ? require('./.env') : {})();
 /**
  * Returns Mock API server as child process
  * @param {boolean} initial process
@@ -13,7 +14,7 @@ const server = initial => {
   env = Object.assign(process.env, env, { INITIAL: initial });
 
   /** start child process for the Mock API */
-  let child = spawn('node', ['mock-api/MockAPI.js'], {
+  let child = spawn('node', ['mock-api.js'], {
     env: env
   });
 

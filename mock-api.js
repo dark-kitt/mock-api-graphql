@@ -48,7 +48,7 @@ const getRoutes = dir => {
         data: file.name,
         directory: route,
         graphql: `${name}.graphql`,
-        route: `${route}/${endpoint}`
+        route: `${route}`
       });
     });
   data(root);

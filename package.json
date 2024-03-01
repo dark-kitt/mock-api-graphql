@@ -1,0 +1,22 @@
+{
+  "name": "mock-api-graphql",
+  "version": "1.0.0",
+  "description": "A small Mock API service to easily mock up data for your specific project.",
+  "main": "index.js",
+  "repository": "https://github.com/dark-kitt/mock-api-graphql.git",
+  "author": "dark-kitt <42038118+dark-kitt@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "api": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3",
+    "express-graphql": "^0.12.0",
+    "graphql": "^16.8.1",
+    "graphql-http": "^1.22.0",
+    "md5": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}
