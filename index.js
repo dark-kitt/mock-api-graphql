@@ -2,7 +2,7 @@
 const { existsSync } = require('fs');
 const { spawn } = require('child_process');
 /** require environment variables */
-let env = (() => existsSync('./.env') ? require('./.env') : {})();
+let env = (() => existsSync('.env') ? require('dotenv').config({ path: '.env' }) : {})();
 /**
  * Returns Mock API server as child process
  * @param {boolean} initial process
@@ -11,12 +11,10 @@ let env = (() => existsSync('./.env') ? require('./.env') : {})();
  */
 const server = initial => {
   /** merge environment variables */
-  env = Object.assign(process.env, env, { INITIAL: initial });
+  env = Object.assign(process.env, { INITIAL: initial });
 
   /** start child process for the Mock API */
-  let child = spawn('node', ['mock-api.js'], {
-    env: env
-  });
+  let child = spawn('node', ['mock-api.js'], { env });
 
   /** child info/logs */
   child.stdout.on('data', data => {
