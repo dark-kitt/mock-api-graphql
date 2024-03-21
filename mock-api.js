@@ -118,7 +118,7 @@ const watch = directory => {
 
         console.info(
           '\x1b[33m%s\x1b[0m',
-          `- ${filename} changed\n> Mock API server restarts on ... http://${host}:${port}`
+          `- ${filename} changed\n> Mock API server restarts on ... http://${host}:${port}${namespace}`
         );
 
         /** restart child process */
@@ -141,7 +141,7 @@ const init = () => {
         '\x1b[1m\x1b[32m%s\x1b[0m\x1b[0m',
         `> Mock API server ${open} on ... http://${server.address().address}:${
           server.address().port
-        }`
+        }${namespace}`
       );
 
       /** start watching data files */
